@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Css/css.css">
+<script src="Java_Script/script.js"></script>
+<title>Katalog Samochodowy</title>
+</head>
+<body>
+
+<section class="hero">
+    <div class="top-bar">
+        <h2>Katalog Samochodowy</h2>
+        <button class="toggle" onclick="toggleDark()">🌙 </button>
+    </div>
+    
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+        <ul id="menu">
+            <li>Strona główna</li>
+            <li>Marki</li>
+            <li>Modele</li>
+            <li>Kontakt</li>
+        </ul>
+    </nav>
+
+    <div class="slider">
+        <img id="slide" src="https://picsum.photos/id/1011/1600/800">
+        <div class="arrow left" onclick="prevSlide()">❮</div>
+        <div class="arrow right" onclick="nextSlide()">❯</div>
+    </div>
+</section>
+
+<section class="countries">
+    <h2>Kraje producentów</h2><br>
+    <div class="country"><img src="https://flagcdn.com/w40/it.png"> Włochy</div>
+    <div class="country"><img src="https://flagcdn.com/w40/de.png"> Niemcy</div>
+    <div class="country"><img src="https://flagcdn.com/w40/us.png"> USA</div>
+    <div class="country"><img src="https://flagcdn.com/w40/jp.png"> Japonia</div>
+    <div class="country"><img src="https://flagcdn.com/w40/gb.png"> Wielka Brytania</div>
+    <div class="country"><img src="https://flagcdn.com/w40/fr.png"> Francja</div>
+</section>
+
+<footer>
+    © 2026 Katalog Samochodowy
+</footer>
+</body>
+</html>

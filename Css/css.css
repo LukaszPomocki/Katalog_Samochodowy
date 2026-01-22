@@ -1,0 +1,151 @@
+:root {
+    --bg: #f2f2f2;
+    --text: #000;
+    --nav: #333;
+    --top: #111;
+    --card: #fff;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #fff;
+    --nav: #1f1f1f;
+    --top: #000;
+    --card: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: var(--top);
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* NAV */
+nav {
+    background: var(--nav);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    padding: 15px 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    background: var(--nav);
+}
+
+/* SLIDER */
+.slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.left { left: 10px; }
+.right { right: 10px; }
+
+/* KRAJE */
+.countries {
+    padding: 30px;
+    background: var(--card);
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.country img {
+    width: 35px;
+}
+
+/* STOPKA */
+footer {
+    background: var(--top);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* RESPONSYWNOŚĆ + HAMBURGER */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        text-align: center;
+    }
+}

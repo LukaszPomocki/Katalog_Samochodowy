@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="Katalog Samochodowy" content="Jeden Landing Page i 6 Podstron">
+<meta name="keywords" content="HTML, CSS, Js">
+<meta name="author" content="Łukasz Pomocki, Jakub Jechura">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css.css">
+<title>Katalog Samochodowy</title>
+</head>
+<body>
+
+<section class="hero">
+    <div class="top-bar">
+        <h2>Katalog Samochodowy</h2>
+        <button class="toggle" onclick="toggleDark()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="Naglowek_SVG ">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+          </button>
+    </div>
+    
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+        <ul id="menu">
+            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="Naglowek_SVG">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+           
+            <a href="index.html">Strona główna</a></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="Naglowek_SVG">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+              </svg>
+              <a href="">Marki</a></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="Naglowek_SVG">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+              </svg>
+              <a href="">Modele</a></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="Naglowek_SVG">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+              <a href="">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="slideshow-container" id="slider">
+
+        <!-- SLIDE 1 -->
+        <div class="mySlides slide-hero active">
+          <div class="top-text">Witamy na naszej stronie</div>
+          <div class="bottom-text">Miłego oglądania</div>
+        </div>
+      
+        <!-- SLIDE 2 -->
+        <div class="mySlides slide-article">
+          <img src="Moto_Brytania/Mclaren/720s.webp" alt="Mclaren 720s">
+          <div class="content">
+            <h2>Najnowszy artykuł</h2>
+            <h3>Mclaren 720s</h3>
+            <h4>4.0 L V8 twin-turbo - 720 KM</h4>
+            <p>McLaren 720S to ikona nowoczesnych supersamochodów, która zachwyca 
+                futurystyczną stylistyką i zaawansowaną aerodynamiką. Model ten napędzany jest potężnym
+                 silnikiem V8 biturbo, który pozwala na osiągnięcie setki w zaledwie 2,9 sekundy. Wyróżnia się 
+                charakterystycznymi drzwiami otwieranymi do góry oraz systemem zawieszenia, który łączy komfort z wyścigową precyzją.
+            </p>
+            <p>Sprawdź najnowsze testy, premiery i rankingi samochodów.</p>
+          </div>
+        </div>
+      
+        <!-- SLIDE 3 -->
+        <div class="mySlides slide-social">
+          <h2>Zaobserwuj nas</h2>
+          <div class="social-icons">
+            <a href="#"><img class="youtube_icon" src="youtube-168-svgrepo-com.svg" alt=""></a>
+            <a href="#"><img class="face_icon" src="facebook-svgrepo-com.svg" alt=""></a>
+            <a href="#"><img class="insta_icon" src="instagram-svgrepo-com.svg" alt=""></a>
+          </div>
+        </div>
+      
+        <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a>
+      </div>
+      
+      <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+</section>
+
+
+<section class="countries">
+    <h2>Kraje producentów</h2><br>
+    <div class="country"><img src="https://flagcdn.com/w40/it.png"><a href="Moto_Włochy/Włochy.html">Włochy</a></div>
+    <div class="country"><img src="https://flagcdn.com/w40/de.png"><a href="Moto_Niemcy/Niemcy.html">Niemcy</a></div>
+    <div class="country"><img src="https://flagcdn.com/w40/us.png"><a href="Moto_Ameryka/Ameryka.html">USA</a></div>
+    <div class="country"><img src="https://flagcdn.com/w40/jp.png"><a href="Moto_Japonia/Japonia.html">Japonia</a></div>
+    <div class="country"><img src="https://flagcdn.com/w40/gb.png"><a href="Moto_Brytania/Brytania.html">Wielka Brytania</a></div>
+    <div class="country"><img src="https://flagcdn.com/w40/fr.png"><a href="Moto_Francja/Francja.html">Francja</a></div>
+</section>
+
+<footer>
+    <div class="footer_div">
+        <h1>Katalog samochodowy</h1>
+        <br>
+        <p>Najlepszy katalog w internecie</p>
+    </div>
+    <div class="footer_div">
+    <ul>
+        <li><b>Mapa strony</b></li>
+        <li>Strona główna</li>
+        <li>Aktualności</li>
+        <li>Umowa sprzedaży samochodu</li>
+    </ul>
+    </div>
+    <div class="footer_div">
+        <ul>
+            <li><b>Informacje</b></li>
+            <li>O serwisie</li>
+            <li>Przewodnik</li>
+            <li>Regulamin</li>
+            <li>Polityka cookies</li>
+            <li>Polityka prywatności</li>
+        </ul>
+    </div>
+    <div class="footer_div">
+        <ul>
+            <li><b>Narzędzia</b></li>
+            <li>Konfigurator</li>
+            <li>Widok 360</li>
+            <li>Porównywarka</li>
+            <li>Stacje paliw</li>
+            <li>Przelicznik kW na KM</li>
+            <li>Kalkulator spalania</li>
+        </ul>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

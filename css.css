@@ -1,0 +1,495 @@
+:root {
+  --bg: #f5f6f7;
+  --text: #111111;
+  --nav: #1f2933;
+  --top: #c1121f;
+  --card: #ffffff;
+  --accent: #c1121f;
+}
+
+body.dark {
+  --bg: #0f1115;
+  --text: #ffffff;
+  --nav: #161a1d;
+  --top: #e63946;
+  --card: #1f2329;
+  --accent: #e63946;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.Naglowek_SVG {
+    height: 22px;
+    width: 22px;
+    padding: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP BAR */
+.top-bar {
+    background: var(--top);
+    color: black;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* NAV */
+nav {
+    background: var(--nav);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: flex;
+    padding: 12px 20px;
+    transition: background 0.3s ease;
+    margin: auto;
+    color: white;
+    cursor: pointer;
+}
+
+nav li:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+nav li a {
+    margin: auto;
+    color: white;
+    cursor: pointer;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    background: var(--nav);
+}
+
+/* ===== SLIDER ===== */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.mySlides {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.mySlides.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+  
+  /* ===== STRZAŁKI ===== */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    font-size: 22px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+  }
+  .next {right: 0;}
+  .prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+  }
+  
+  /* ===== KROPKI ===== */
+  .dots {
+    text-align: center;
+    padding: 10px;
+  }
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background: #777;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .dot.active {background: #fff;}
+  
+  /* ===== SLIDE 1 (BACKGROUND) ===== */
+  .slide-hero {
+    background: url("Moto_Ameryka/Chevrolet/chevrolet-camaro-l-01.jpg") center / cover no-repeat;
+    position: relative;
+    color: white;
+  }
+  .slide-hero > * {
+    position: relative;
+    z-index: 2;
+}
+  .slide-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    pointer-events: none;
+  }
+  .slide-hero .top-text,
+  .slide-hero .bottom-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+  .slide-hero .top-text {
+    top: 40px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .slide-hero .bottom-text {
+    bottom: 40px;
+    font-size: 18px;
+  }
+  
+  /* ===== SLIDE 2 ===== */
+  .slide-article {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.slide-article img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide-article .content {
+    width: 50%;
+    padding: 40px;
+}
+  
+  /* ===== SLIDE 3 ===== */
+  .slide-social {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .social-icons svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+    transition: 0.3s;
+  }
+  .social-icons svg:hover {
+    fill: #e60023;
+  }
+  .slide-social h2 {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.2);
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.slide-social h2:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+.slide-social .social-icons {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 12px;
+  background-color: rgb(142, 142, 142);
+}
+
+/* KRAJE */
+.countries {
+    padding: 30px;
+    background: var(--card);
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.country img {
+    width: 35px;
+}
+
+/* STOPKA */
+footer {
+    display: flex;
+    justify-content: center;
+    background: var(--top);
+    color: white;
+    padding: 15px;
+}
+
+.footer_div {
+    margin: 15px;
+    padding: 5px;
+}
+
+.footer_div li{
+    padding: 5px;
+}
+
+/*Styll do div'a marki*/
+
+.marki_zdjecie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.marki_zdjecie img{
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marki_zdjecie img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.linebutton {
+  width: 200px;
+  background-color: var(--top); 
+  border-radius: 25px;
+  padding: 12px 20px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white; 
+  transition: all 0.3s ease;
+}
+
+.linebutton a {
+  color: inherit; 
+  text-decoration: none; 
+  display: block; 
+}
+
+.linebutton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  background-color: rgba(255,255,255,0.1); 
+  border-color: #4f6fe0; 
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 15px 0;
+  flex-wrap: wrap; 
+}
+.linebutton marka {
+    width: 50%;
+}
+
+ p {
+    width: 100%;
+    margin: 5px;
+}
+
+/*Styll do div'a samochody */
+
+.marki {
+    padding: 5px;
+}
+image{
+    float:left;
+}
+.all{
+    width:80%;
+    margin:auto;
+    padding: 10px;
+}
+.all::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+    
+.box {
+    float: left;
+    width: 50%;
+    padding: 50px;
+    height: 300px;
+}
+.line{
+    margin:auto;
+    width: 95%;
+    
+}
+.linebutton{
+    background-color: var(--nav);
+    border-radius: 15px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width:100%;
+}
+
+.linebutton:hover{
+  color: var(--text);
+}
+
+/* media icony */
+
+.face_icon, .insta_icon, .youtube_icon{
+    height: 50px;
+    width: 50px;
+    color: white;
+}
+
+
+/* RESPONSYWNOŚĆ + HAMBURGER */
+@media (max-width: 768px) {
+    .slideshow-container {
+      height: 100vh;
+    }
+    
+    .slide-article {
+        flex-direction: column;
+    }
+    
+    .slide-article img,
+    .slide-article .content {
+        width: 100%;
+        height: 50%;
+      }
+    
+      .slide-hero .top-text {
+        font-size: 22px;
+    }
+
+    .mySlides {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+    }
+    .slide-hero {
+      background-position: center;
+    }
+    
+      .slideshow-container {
+        height: 100%;
+      }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        text-align: center;
+    }
+    footer {
+        flex-direction: column;
+    }
+
+    .footer_div {
+        width: 100%;
+    }
+    .marki_zdjecie img {
+      width: 90%;
+  }
+
+  .line {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .linebutton {
+      width: 70%;
+  }
+}
